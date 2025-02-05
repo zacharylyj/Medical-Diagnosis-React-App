@@ -1,19 +1,21 @@
+import './css/NavBar.css';
+
 function NavBar() {
   return (
-    <nav style={styles.nav}>
-      <ul style={styles.navList}>
-        <li style={styles.navItem}>
-          <a href="#home" style={styles.navLink}>
+    <nav className="navbar">
+      <ul className="nav-list">
+        <li className="nav-item">
+          <a href="#home" className="nav-link">
             Home
           </a>
         </li>
-        <li style={styles.navItem}>
-          <a href="#about" style={styles.navLink}>
+        <li className="nav-item">
+          <a href="#about" className="nav-link">
             About
           </a>
         </li>
-        <li style={styles.navItem}>
-          <a href="#contact" style={styles.navLink}>
+        <li className="nav-item">
+          <a href="#contact" className="nav-link">
             Contact
           </a>
         </li>
@@ -21,27 +23,5 @@ function NavBar() {
     </nav>
   );
 }
-
-const styles = {
-  nav: {
-    backgroundColor: '#333',
-    padding: '1rem',
-  },
-  navList: {
-    listStyleType: 'none',
-    display: 'flex',
-    justifyContent: 'space-around',
-    margin: 0,
-    padding: 0,
-  },
-  navItem: {
-    margin: 0,
-  },
-  navLink: {
-    color: '#fff',
-    textDecoration: 'none',
-    fontSize: '1.2rem',
-  },
-};
 
 export default NavBar;

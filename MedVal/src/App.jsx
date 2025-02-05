@@ -1,5 +1,5 @@
-import NavBar from './components/InputForm';
-import InputForm from './components/NavBar';
+import NavBar from './components/NavBar';
+import InputForm from './components/InputForm';
 import './App.css';
 
 function App() {

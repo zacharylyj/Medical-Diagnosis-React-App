@@ -1,6 +1,9 @@
-import { useState } from 'react';
+// InputForm.jsx
 
-function UserForm() {
+import { useState } from 'react';
+import './css/InputForm.css';
+
+function InputForm() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -22,9 +25,9 @@ function UserForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={formStyles.form}>
-      <div style={formStyles.formGroup}>
-        <label htmlFor="name" style={formStyles.label}>
+    <form onSubmit={handleSubmit} className="form-container">
+      <div className="form-group">
+        <label htmlFor="name" className="label">
           Name:
         </label>
         <input
@@ -33,12 +36,12 @@ function UserForm() {
           name="name"
           value={formData.name}
           onChange={handleChange}
-          style={formStyles.input}
+          className="input"
           required
         />
       </div>
-      <div style={formStyles.formGroup}>
-        <label htmlFor="email" style={formStyles.label}>
+      <div className="form-group">
+        <label htmlFor="email" className="label">
           Email:
         </label>
         <input
@@ -47,45 +50,15 @@ function UserForm() {
           name="email"
           value={formData.email}
           onChange={handleChange}
-          style={formStyles.input}
+          className="input"
           required
         />
       </div>
-      <button type="submit" style={formStyles.button}>
+      <button type="submit" className="button">
         Submit
       </button>
     </form>
   );
 }
 
-const formStyles = {
-  form: {
-    maxWidth: '400px',
-    margin: '2rem auto',
-    padding: '1rem',
-    border: '1px solid #ccc',
-    borderRadius: '5px',
-  },
-  formGroup: {
-    marginBottom: '1rem',
-  },
-  label: {
-    display: 'block',
-    marginBottom: '.5rem',
-  },
-  input: {
-    width: '100%',
-    padding: '.5rem',
-    fontSize: '1rem',
-  },
-  button: {
-    backgroundColor: '#333',
-    color: '#fff',
-    padding: '.5rem 1rem',
-    border: 'none',
-    borderRadius: '5px',
-    cursor: 'pointer',
-  },
-};
-
-export default UserForm;
+export default InputForm;
